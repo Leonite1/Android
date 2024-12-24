@@ -1,45 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?> 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
+
+    <!-- Person Icon -->
+    <ImageView
+        android:id="@+id/icon_above_username"
+        android:layout_width="89dp"
+        android:layout_height="78dp"
+        android:src="@drawable/person"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/username"
+        android:layout_marginTop="150dp" />
 
     <!-- Username -->
     <EditText
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#30ffffff"
-        android:hint="Username"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:layout_margin="10dp"
-        android:padding="20dp"
+        android:background="#30ffffff"
         android:drawableLeft="@drawable/person1"
         android:drawablePadding="20dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Username"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_above_username"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Password -->
     <EditText
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#30ffffff"
-        android:hint="Password"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:layout_margin="10dp"
-        android:padding="20dp"
+        android:background="#30ffffff"
         android:drawableLeft="@drawable/password"
         android:drawablePadding="20dp"
+        android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/username"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Login Button -->
     <com.google.android.material.button.MaterialButton
@@ -47,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOG IN"
-        android:backgroundTint="@color/design_default_color_background"
+        android:backgroundTint="@color/black"
         app:layout_constraintTop_toBottomOf="@id/password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +90,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Social Icons (LinearLayout) -->
+    <!-- Social Icons -->
     <LinearLayout
         android:id="@+id/socialicons"
         android:layout_width="wrap_content"
@@ -86,7 +101,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="20dp">
-
+        
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -102,7 +117,7 @@
             android:layout_height="48dp"
             android:layout_margin="20dp"
             android:src="@drawable/twitter"/>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

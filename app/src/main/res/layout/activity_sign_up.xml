@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".SignUpActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        tools:context=".LogInActivity">
 
-    <!-- Person Icon -->
+
     <ImageView
         android:id="@+id/icon_above_username"
         android:layout_width="89dp"
@@ -19,7 +26,7 @@
         app:layout_constraintBottom_toTopOf="@id/username"
         android:layout_marginTop="150dp" />
 
-    <!-- Username -->
+
     <EditText
         android:id="@+id/username"
         android:layout_width="0dp"
@@ -37,7 +44,6 @@
         app:layout_constraintTop_toBottomOf="@id/icon_above_username"
         app:layout_constraintHorizontal_bias="0.5" />
 
-    <!-- Email -->
     <EditText
         android:id="@+id/email"
         android:layout_width="0dp"
@@ -55,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@id/username"
         app:layout_constraintHorizontal_bias="0.5" />
 
-    <!-- Password -->
+ 
     <EditText
         android:id="@+id/password"
         android:layout_width="0dp"
@@ -74,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@id/email"
         app:layout_constraintHorizontal_bias="0.5" />
 
-    <!-- Confirm New Password (Optional) -->
+   
     <EditText
         android:id="@+id/confirmPassword"
         android:layout_width="0dp"
@@ -93,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@id/password"
         app:layout_constraintHorizontal_bias="0.5" />
 
-    <!-- Signup Button -->
+   
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signupbutton"
         android:layout_width="wrap_content"
@@ -106,7 +112,7 @@
         android:layout_margin="20dp"/>
     
 
-    <!-- Social Icons -->
+   
     <TextView
         android:id="@+id/others"
         android:layout_width="wrap_content"
